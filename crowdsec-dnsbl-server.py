@@ -11,6 +11,7 @@ No upstream resolver.
 from twisted.internet import reactor, defer
 from twisted.names import client, dns, error, server
 import os
+import ipaddress
 
 from pycrowdsec.client import StreamClient
 
@@ -33,6 +34,11 @@ class CrowdSecDecisionsResolver(object):
         """
         Checks if ip is indeed a valid IP address
         """
+        try:
+            _ip = ipaddress.ip_address(ip)
+        except ValueError:
+            return(False)
+        # Should we use a regex? I think this is faster, and in the context of a dns resolver...
         return(True)  # TODO: make real :P
 
     def _ipFromQuery(self, query):  # FIX: duplicate code in _ValidDNSBLquery...
