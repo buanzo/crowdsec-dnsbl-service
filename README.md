@@ -1,4 +1,4 @@
-# private-dnsbl
+# crowdsec-dnsbl-service
 DNSBL server based on python Twisted framework. 
 Requires pycrowdsec and twisted.
 
