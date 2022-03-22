@@ -6,3 +6,4 @@ remember to cscli bouncers add dnsblservice
 
 The key goes in envvar CROWDSEC_API_KEY
 
+*THIS IS ALPHA SOFTWARE - USE AT YOUR OWN RISK*
