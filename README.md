@@ -1,2 +1,8 @@
 # private-dnsbl
-private DNSBL server - includes everything to start a dnsbl service droplet using cs data
+DNSBL server based on python Twisted framework. 
+Requires pycrowdsec and twisted.
+
+remember to cscli bouncers add dnsblservice
+
+The key goes in envvar CROWDSEC_API_KEY
+
